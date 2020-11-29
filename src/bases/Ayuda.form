@@ -98,17 +98,14 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Component id="decoracion" max="32767" attributes="0"/>
-              <Group type="102" attributes="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="82" max="-2" attributes="0"/>
-                          <Component id="informacion" min="-2" pref="475" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="125" max="-2" attributes="0"/>
-                          <Component id="Manual" min="-2" pref="408" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="informacion" min="-2" pref="552" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="130" max="-2" attributes="0"/>
+                  <Component id="Manual" min="-2" pref="408" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -117,11 +114,11 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <Component id="decoracion" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
                   <Component id="Manual" min="-2" pref="28" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Component id="informacion" min="-2" pref="281" max="-2" attributes="0"/>
-                  <EmptySpace pref="70" max="32767" attributes="0"/>
+                  <EmptySpace pref="75" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -142,7 +139,7 @@
               <Font name="Microsoft JhengHei UI" size="14" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="&quot;&lt;html&gt; BIENVENID@ AL CONVERTIDOR DE BASES N&#xda;MERICAS &lt;p&gt; &lt;p&gt; El convertidor de bases numericas es una aplicacion que te ayuda a calcular el valor de un numero desde una base origen a una base destino &lt;p&gt; &lt;p&gt; &#xbf;C&#xf3;mo usar el CONVERTIDOR DE BASES N&#xda;MERICAS?  &lt;p&gt; 1.- Eliga la base origen del n&#xfa;mero que desea convertir (De base 2 a 16) &lt;p&gt; 2.- Ingresa el numero que deseas convertir (solo admite 10 car&#xe1;cteres) &lt;p&gt; 3.- Eliga la base destino en que se convertira el numero ingresado (De base 2 a 16) &lt;p&gt; 4.- Presione \&quot;Convertir\&quot; &lt;p&gt;  5.- Obten tu resultado &lt;p&gt; 6.- Para hacer una nueva conversi&#xf3;n presiona \&quot;Limpiar\&quot; &lt;/html&gt;&quot;" type="code"/>
+              <Connection code="&quot;&lt;html&gt; BIENVENID@ AL CONVERTIDOR DE BASES N&#xda;MERICAS &lt;p&gt; &lt;p&gt; El convertidor de bases n&#xfa;mericas es una aplicaci&#xf3;n que te ayuda a calcular el valor de un n&#xfa;mero desde una base origen a una base destino &lt;p&gt; &lt;p&gt; &#xbf;C&#xf3;mo usar el CONVERTIDOR DE BASES N&#xda;MERICAS?  &lt;p&gt; 1.- Eliga la base origen del n&#xfa;mero que desea convertir (De base 2 a 16) &lt;p&gt; 2.- Ingresa el numero que deseas convertir (solo admite 10 car&#xe1;cteres) &lt;p&gt; 3.- Eliga la base destino en que se convertira el numero ingresado (De base 2 a 16) &lt;p&gt; 4.- Presione \&quot;Convertir\&quot; &lt;p&gt;  5.- Obten tu resultado &lt;p&gt; 6.- Para hacer una nueva conversi&#xf3;n presiona \&quot;Limpiar\&quot; &lt;/html&gt;&quot;" type="code"/>
             </Property>
           </Properties>
         </Component>

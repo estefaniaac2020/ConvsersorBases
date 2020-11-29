@@ -49,7 +49,7 @@ public class Ayuda extends javax.swing.JFrame {
         Manual.setText("Ayuda ");
 
         informacion.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 14)); // NOI18N
-        informacion.setText("<html> BIENVENID@ AL CONVERTIDOR DE BASES NÚMERICAS <p> <p> El convertidor de bases numericas es una aplicacion que te ayuda a calcular el valor de un numero desde una base origen a una base destino <p> <p> ¿Cómo usar el CONVERTIDOR DE BASES NÚMERICAS?  <p> 1.- Eliga la base origen del número que desea convertir (De base 2 a 16) <p> 2.- Ingresa el numero que deseas convertir (solo admite 10 carácteres) <p> 3.- Eliga la base destino en que se convertira el numero ingresado (De base 2 a 16) <p> 4.- Presione \"Convertir\" <p>  5.- Obten tu resultado <p> 6.- Para hacer una nueva conversión presiona \"Limpiar\" </html>");
+        informacion.setText("<html> BIENVENID@ AL CONVERTIDOR DE BASES NÚMERICAS <p> <p> El convertidor de bases númericas es una aplicación que te ayuda a calcular el valor de un número desde una base origen a una base destino <p> <p> ¿Cómo usar el CONVERTIDOR DE BASES NÚMERICAS?  <p> 1.- Eliga la base origen del número que desea convertir (De base 2 a 16) <p> 2.- Ingresa el numero que deseas convertir (solo admite 10 carácteres) <p> 3.- Eliga la base destino en que se convertira el numero ingresado (De base 2 a 16) <p> 4.- Presione \"Convertir\" <p>  5.- Obten tu resultado <p> 6.- Para hacer una nueva conversión presiona \"Limpiar\" </html>");
 
         decoracion.setBackground(new java.awt.Color(255, 255, 0));
 
@@ -75,25 +75,24 @@ public class Ayuda extends javax.swing.JFrame {
         AyudaLayout.setHorizontalGroup(
             AyudaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(decoracion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AyudaLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(informacion, javax.swing.GroupLayout.PREFERRED_SIZE, 552, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(AyudaLayout.createSequentialGroup()
-                .addGroup(AyudaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(AyudaLayout.createSequentialGroup()
-                        .addGap(82, 82, 82)
-                        .addComponent(informacion, javax.swing.GroupLayout.PREFERRED_SIZE, 475, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(AyudaLayout.createSequentialGroup()
-                        .addGap(125, 125, 125)
-                        .addComponent(Manual, javax.swing.GroupLayout.PREFERRED_SIZE, 408, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(130, 130, 130)
+                .addComponent(Manual, javax.swing.GroupLayout.PREFERRED_SIZE, 408, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         AyudaLayout.setVerticalGroup(
             AyudaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(AyudaLayout.createSequentialGroup()
                 .addComponent(decoracion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(44, 44, 44)
                 .addComponent(Manual, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(49, 49, 49)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(informacion, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(70, Short.MAX_VALUE))
+                .addContainerGap(75, Short.MAX_VALUE))
         );
 
         Inicio.setText("Inicio");

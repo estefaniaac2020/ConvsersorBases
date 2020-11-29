@@ -33,8 +33,8 @@ public class Inicio extends javax.swing.JFrame {
         Portada = new javax.swing.JPanel();
         Continuar = new javax.swing.JButton();
         decoradoEncabezado = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        logoIpn = new javax.swing.JLabel();
+        logoUpiicsa = new javax.swing.JLabel();
         datosEquipo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -55,11 +55,11 @@ public class Inicio extends javax.swing.JFrame {
 
         decoradoEncabezado.setBackground(new java.awt.Color(255, 255, 0));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Escudo_UPIICSA (1).png"))); // NOI18N
-        jLabel1.setText("jLabel1");
+        logoIpn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Escudo_UPIICSA (1).png"))); // NOI18N
+        logoIpn.setText("jLabel1");
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Logo_Instituto_Politécnico_Nacional (1).png"))); // NOI18N
-        jLabel2.setText("jLabel2");
+        logoUpiicsa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Logo_Instituto_Politécnico_Nacional (1).png"))); // NOI18N
+        logoUpiicsa.setText("jLabel2");
 
         javax.swing.GroupLayout decoradoEncabezadoLayout = new javax.swing.GroupLayout(decoradoEncabezado);
         decoradoEncabezado.setLayout(decoradoEncabezadoLayout);
@@ -67,16 +67,16 @@ public class Inicio extends javax.swing.JFrame {
             decoradoEncabezadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, decoradoEncabezadoLayout.createSequentialGroup()
                 .addGap(29, 29, 29)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(logoUpiicsa, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(logoIpn, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(33, 33, 33))
         );
         decoradoEncabezadoLayout.setVerticalGroup(
             decoradoEncabezadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(decoradoEncabezadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(logoIpn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(logoUpiicsa, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         datosEquipo.setText("<html> <p align=center>INSTITUTO POLITÉCNICO NACIONAL<p align=center>Unidad Profesional Interdisciplinaria de Ingeniería y Ciencias Sociales y Administrativas <p align=center><p align=center> Programación Orientada a Objetos  <p align=center> <p align=center><b>CONVERSOR DE BASES NÚMERICAS</b> <p>  <p align=center>EQUIPO NO. 4 <p align=center><p align=center>Arreola Camargo Estefania<p align=center>Franco Ferrer Carlos<p align=center>Manzano Nava Pablo Antonio<p align=center>Nieto Castro Rosalinda Jacqueline<p align=center>Reyes Flores Brayan Axel</html>");
@@ -134,19 +134,7 @@ public class Inicio extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        try {
-            javax.swing.UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-        }
-                      
-         catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Inicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Inicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Inicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Inicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
+     
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
@@ -183,7 +171,7 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JPanel Portada;
     private javax.swing.JLabel datosEquipo;
     private javax.swing.JPanel decoradoEncabezado;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel logoIpn;
+    private javax.swing.JLabel logoUpiicsa;
     // End of variables declaration//GEN-END:variables
 }

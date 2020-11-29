@@ -274,8 +274,6 @@ public class Conversor extends javax.swing.JFrame {
         String baseDe=Base_destino.getSelectedItem().toString();
         String numeroC=numConvertir.getText();
         // Conversion númerica
-        int numeroTem=0;    //numero temporal de las posiciones de final a principio
-        int numeroBaseDec=0; //numero convertido a base decimal
         
         int baseOrigen=Integer.parseInt(baseOr);
         int baseDestino=Integer.parseInt(baseDe);
