@@ -1,26 +1,21 @@
-
-package bases;
-
-import javax.swing.UIManager;
-
-/**
- *
- * @author ESTEFANIA TAVAED
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
+package bases;
+import javax.swing.UIManager;
+ //* @author Equipo 4
 public class Inicio extends javax.swing.JFrame {
- 
-   
-
-    /**
+  /**
      * Creates new form Inicio
      */
     public Inicio() {
     
-        setTitle("Inicio");
-        initComponents();
+        setTitle("Inicio");         //Título de la ventana 
+        initComponents();           //Componentes gráficos
         this.setLocationRelativeTo(null);
     }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -79,7 +74,7 @@ public class Inicio extends javax.swing.JFrame {
                 .addComponent(logoUpiicsa, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        datosEquipo.setText("<html> <p align=center>INSTITUTO POLITÉCNICO NACIONAL<p align=center>Unidad Profesional Interdisciplinaria de Ingeniería y Ciencias Sociales y Administrativas <p align=center><p align=center> Programación Orientada a Objetos  <p align=center> <p align=center><b>CONVERSOR DE BASES NÚMERICAS</b> <p>  <p align=center>EQUIPO NO. 4 <p align=center><p align=center>Arreola Camargo Estefania<p align=center>Franco Ferrer Carlos<p align=center>Manzano Nava Pablo Antonio<p align=center>Nieto Castro Rosalinda Jacqueline<p align=center>Reyes Flores Brayan Axel</html>");
+        datosEquipo.setText("<html> <p align=center>INSTITUTO POLITÉCNICO NACIONAL<p align=center>Unidad Profesional Interdisciplinaria de Ingeniería y Ciencias Sociales y Administrativas <p align=center><p align=center> Programación Orientada a Objetos  <p align=center> <p align=center><b>CONVERTIDOR DE BASES NUMÉRICAS</b> <p>  <p align=center>EQUIPO NO. 4 <p align=center><p align=center>Arreola Camargo Estefania<p align=center>Franco Ferrer Carlos<p align=center>Manzano Nava Pablo Antonio<p align=center>Nieto Castro Rosalinda Jacqueline<p align=center>Reyes Flores Brayan Axel</html>");
         datosEquipo.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 14)); // NOI18N
         datosEquipo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
@@ -123,14 +118,11 @@ public class Inicio extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void ContinuarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ContinuarActionPerformed
-        Conversor a= new Conversor();
+        Conversor a= new Conversor();   //Con este método accede a la ventana Conversor
         a.setVisible(true);
-        this.setVisible(false);
-        
-        
+        this.setVisible(false); 
     }//GEN-LAST:event_ContinuarActionPerformed
-
-    /**
+     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
@@ -157,7 +149,7 @@ public class Inicio extends javax.swing.JFrame {
         }
         //</editor-fold>
 
-        /* Create and display the form */
+        /* Create and display the form */              
         java.awt.EventQueue.invokeLater(() -> {
             new Inicio().setVisible(true);
         });

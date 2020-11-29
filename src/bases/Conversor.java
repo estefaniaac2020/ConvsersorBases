@@ -1,25 +1,24 @@
 package bases;
-
+/**
+ *
+ * @author Equipo 4
+ */
 import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 import static java.lang.Math.*;
 import java.awt.Toolkit;
 
-/**
- *
- * @author ESTEFANIA TAVAED
- */
+
 public class Conversor extends javax.swing.JFrame {
-       private int baseNumero;
-       
-
+       private int baseNumero;     //Numero de base que se seleccionara en comboBox
+    /**
+     * Creates new form Conversor
+     */     
     public Conversor() {
-        initComponents();
+        initComponents();           //Componentes graficos
         this.setLocationRelativeTo(null);
-        setTitle("Convsersiones Númericas");
-    }
-
-  
+        setTitle("Convsersiones Númericas"); //Titulo de ventana
+    }  
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -88,7 +87,7 @@ public class Conversor extends javax.swing.JFrame {
 
         Titulo.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 18)); // NOI18N
         Titulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Titulo.setText("CONVERTIDOR DE BASES NÚMERICAS");
+        Titulo.setText("CONVERTIDOR DE BASES NUMÉRICAS");
 
         ingrese.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 14)); // NOI18N
         ingrese.setText("Ingrese número a convertir:");
@@ -182,9 +181,6 @@ public class Conversor extends javax.swing.JFrame {
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(FormularioLayout.createSequentialGroup()
                 .addGroup(FormularioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(FormularioLayout.createSequentialGroup()
-                        .addGap(169, 169, 169)
-                        .addComponent(Titulo))
                     .addGroup(FormularioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addGroup(FormularioLayout.createSequentialGroup()
                             .addGap(30, 30, 30)
@@ -195,16 +191,19 @@ public class Conversor extends javax.swing.JFrame {
                             .addGap(24, 24, 24)
                             .addComponent(Base_Origen, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(Origen, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(Origen, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(FormularioLayout.createSequentialGroup()
+                        .addGap(160, 160, 160)
+                        .addComponent(Titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         FormularioLayout.setVerticalGroup(
             FormularioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(FormularioLayout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(Titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(38, 38, 38)
+                .addGap(33, 33, 33)
                 .addGroup(FormularioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Base_Origen, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Origen, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -269,35 +268,26 @@ public class Conversor extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void convertirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_convertirActionPerformed
-        // Obteniendo los datos seleccionados por el usuario de los comboBox "Origen" y "Base_Destino"
-        String baseOr=Origen.getSelectedItem().toString();
-        String baseDe=Base_destino.getSelectedItem().toString();
-        String numeroC=numConvertir.getText();
-        // Conversion númerica
+        // Obtencion los datos seleccionados por el usuario de los comboBox "Origen" y "Base_Destino"
+        String baseOr=Origen.getSelectedItem().toString();     //Base origen seleccionada(base de numero ingresado)
+        String baseDe=Base_destino.getSelectedItem().toString(); //Base destino seleccionada (base a convertir numero ingresado)
+        String numeroC=numConvertir.getText();    //numero ingresado por el usuario
+        // Conversion númerica       
+        int baseOrigen=Integer.parseInt(baseOr);    //Base origen que se convertira con clase Integer
+        int baseDestino=Integer.parseInt(baseDe);  // Base destino que resultara con clase Integer
         
-        int baseOrigen=Integer.parseInt(baseOr);
-        int baseDestino=Integer.parseInt(baseDe);
-        
-        String resultadoBase = Integer.toString(Integer.valueOf(numeroC, baseOrigen), baseDestino);
-        numResul.setText(resultadoBase);
-        
-         
-      
-        
- 
-       
-          
-    
+        String resultadoBase = Integer.toString(Integer.valueOf(numeroC, baseOrigen), baseDestino); //Resultado de conversion
+        numResul.setText(resultadoBase); //impresion de resultado de conversion
     }//GEN-LAST:event_convertirActionPerformed
 
     private void RegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegresarActionPerformed
-        Inicio a= new Inicio();
+        Inicio a= new Inicio(); //Funcion de boton uitem de menu bar "Regresar" a ventana "Inicio"
         a.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_RegresarActionPerformed
 
     private void AcercaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AcercaActionPerformed
-        Ayuda a=new Ayuda();
+        Ayuda a=new Ayuda(); //Funcion de boton item de menu bar "Acerca" a ventana "Ayuda"
         a.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_AcercaActionPerformed
@@ -307,76 +297,76 @@ public class Conversor extends javax.swing.JFrame {
     }//GEN-LAST:event_numConvertirActionPerformed
 
     private void numConvertirKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_numConvertirKeyReleased
-        numConvertir.setText(numConvertir.getText().toUpperCase());
+        numConvertir.setText(numConvertir.getText().toUpperCase()); //Obtiene el numero ingresado
     }//GEN-LAST:event_numConvertirKeyReleased
 
     private void numConvertirKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_numConvertirKeyTyped
-      if(numConvertir.getText().length()>=10){
+      if(numConvertir.getText().length()>=10){  //Solo admite numero de un tamaño de 10 caracteres 
             evt.consume();
             Toolkit.getDefaultToolkit().beep();
         }    
       char c = evt.getKeyChar();
-       c = Character.toUpperCase(c); // CONVERTIR EN MAYUSCULA 
+       c = Character.toUpperCase(c); // Al ingresar letras las convertira en mayusculas 
         
-        if(Origen.getSelectedIndex()==0){
-          if(c!='1' && c!='0') evt.consume();
+        if(Origen.getSelectedIndex()==0){  //Se elige opcion base 2 
+          if(c!='1' && c!='0') evt.consume();  //solo admite teclas 01
           setTitle("Número válido");
        }
-        else if(Origen.getSelectedIndex() == 1){
-          if(c!='0' && c!='1' && c!='2') evt.consume();
+        else if(Origen.getSelectedIndex() == 1){ //Se elige opcion base 3
+          if(c!='0' && c!='1' && c!='2') evt.consume(); //solo admite teclas 012
           setTitle("Número válido");
        }
-        else if(Origen.getSelectedIndex() == 2){
-          if(c!='0' && c!='1' && c!='2'&& c!='3') evt.consume();
+        else if(Origen.getSelectedIndex() == 2){ //Se elige opcion base 4
+          if(c!='0' && c!='1' && c!='2'&& c!='3') evt.consume(); //solo admite teclas 0123
           setTitle("Número válido");
        }
-        else if(Origen.getSelectedIndex() == 3){
-          if(c!='0' && c!='1' && c!='2'&& c!='3'&& c!='4') evt.consume();
+        else if(Origen.getSelectedIndex() == 3){  //Se elige opcion base 5 
+          if(c!='0' && c!='1' && c!='2'&& c!='3'&& c!='4') evt.consume(); //solo admite teclas 01234
           setTitle("Número válido");
        }
-        else if(Origen.getSelectedIndex() == 4){
-          if(c!='0' && c!='1' && c!='2'&& c!='3'&& c!='4'&& c!='5') evt.consume();
+        else if(Origen.getSelectedIndex() == 4){  //Se elige opcion base 6
+          if(c!='0' && c!='1' && c!='2'&& c!='3'&& c!='4'&& c!='5') evt.consume();//solo admite teclas 012345
           setTitle("Número válido");
        }
-        else if(Origen.getSelectedIndex() == 5){
+        else if(Origen.getSelectedIndex() == 5){ //Se elige opcion base 7
           if(c!='0' && c!='1' && c!='2'&& c!='3'&& c!='4'&& c!='5'&& c!='6') evt.consume();
-          setTitle("Número válido");
+          setTitle("Número válido"); //solo admite teclas 0123456
        }
-        else if(Origen.getSelectedIndex() == 6){
+        else if(Origen.getSelectedIndex() == 6){ //Se elige opcion base 8
           if(c!='0' && c!='1' && c!='2'&& c!='3'&& c!='4'&& c!='5'&& c!='6'&& c!='7') evt.consume();
-          setTitle("Número válido");
+          setTitle("Número válido"); //solo admite teclas 01234567
        }
-        else if(Origen.getSelectedIndex() == 7){
+        else if(Origen.getSelectedIndex() == 7){ //Se elige opcion base 9
           if(c!='0' && c!='1' && c!='2'&& c!='3'&& c!='4'&& c!='5'&& c!='6'&& c!='7'&& c!='8') evt.consume();
-          setTitle("Número válido");
+          setTitle("Número válido");  //solo admite teclas 01234578
        }
-        else if(Origen.getSelectedIndex() == 8){
+        else if(Origen.getSelectedIndex() == 8){ //Se elige opcion base 10
           if(c!='0' && c!='1' && c!='2'&& c!='3'&& c!='4'&& c!='5'&& c!='6'&& c!='7'&& c!='8'&& c!='9') evt.consume();
-          setTitle("Número válido");
+          setTitle("Número válido");  //solo admite teclas 012345789
        }
-        else if(Origen.getSelectedIndex() == 9){
+        else if(Origen.getSelectedIndex() == 9){ //Se elige opcion base 11
           if(c!='0' && c!='1' && c!='2'&& c!='3'&& c!='4'&& c!='5'&& c!='6'&& c!='7'&& c!='8'&& c!='9'&& c!='A') evt.consume();
-          setTitle("Número válido");
+          setTitle("Número válido"); //solo admite teclas 012345789A
        }
-        else if(Origen.getSelectedIndex() == 10){
+        else if(Origen.getSelectedIndex() == 10){ //Se elige opcion base 12
           if(c!='0' && c!='1' && c!='2'&& c!='3'&& c!='4'&& c!='5'&& c!='6'&& c!='7'&& c!='8'&& c!='9'&& c!='A'&& c!='B') evt.consume();
-          setTitle("Número válido");
+          setTitle("Número válido"); //solo admite teclas 012345789AB
        }
-        else if(Origen.getSelectedIndex() == 11){
+        else if(Origen.getSelectedIndex() == 11){ //Se elige opcion base 13
           if(c!='0' && c!='1' && c!='2'&& c!='3'&& c!='4'&& c!='5'&& c!='6'&& c!='7'&& c!='8'&& c!='9'&& c!='A'&& c!='B'&& c!='C') evt.consume();
-          setTitle("Número válido");
+          setTitle("Número válido");  //solo admite teclas 012345789ABC
        }
-        else if(Origen.getSelectedIndex() == 12){
+        else if(Origen.getSelectedIndex() == 12){ //Se elige opcion base 14
           if(c!='0' && c!='1' && c!='2'&& c!='3'&& c!='4'&& c!='5'&& c!='6'&& c!='7'&& c!='8'&& c!='9'&& c!='A'&& c!='B'&& c!='C'&& c!='D') evt.consume();
-          setTitle("Número válido");
+          setTitle("Número válido"); //solo admite teclas 012345789ABCD
        }
-       else if(Origen.getSelectedIndex() == 13){
+       else if(Origen.getSelectedIndex() == 13){ //Se elige opcion base 15
           if(c!='0' && c!='1' && c!='2'&& c!='3'&& c!='4'&& c!='5'&& c!='6'&& c!='7'&& c!='8'&& c!='9'&& c!='A'&& c!='B'&& c!='C'&& c!='D'&& c!='E') evt.consume();
-          setTitle("Número válido");
+          setTitle("Número válido"); //solo admite teclas 012345789ABCDE
        }
-        else if(Origen.getSelectedIndex() == 14){
+        else if(Origen.getSelectedIndex() == 14){ //Se elige opcion base 16
           if(c!='0' && c!='1' && c!='2'&& c!='3'&& c!='4'&& c!='5'&& c!='6'&& c!='7'&& c!='8'&& c!='9'&& c!='A'&& c!='B'&& c!='C'&& c!='D'&& c!='E'&& c!='F') evt.consume();
-          setTitle("Número válido");
+          setTitle("Número válido"); //solo admite teclas 012345789ABCDEF
        }
         
  
@@ -384,7 +374,7 @@ public class Conversor extends javax.swing.JFrame {
     }//GEN-LAST:event_numConvertirKeyTyped
 
     private void numConvertirFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_numConvertirFocusGained
-        numConvertir.selectAll();
+        numConvertir.selectAll(); 
     }//GEN-LAST:event_numConvertirFocusGained
 
     private void OrigenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrigenActionPerformed
@@ -393,6 +383,7 @@ public class Conversor extends javax.swing.JFrame {
     }//GEN-LAST:event_OrigenActionPerformed
 
     private void OrigenItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_OrigenItemStateChanged
+        //Se elige base origen del numero ingresado en comboBox "Origen"
         if(Origen.getSelectedIndex() == 0 ) {// sistema binario
             baseNumero=2;
             numConvertir.setText(null);
@@ -404,12 +395,10 @@ public class Conversor extends javax.swing.JFrame {
         if(Origen.getSelectedIndex() == 2 ) {// sistema cuaternario
             baseNumero=4;
             numConvertir.setText(null);
-
         }
         if(Origen.getSelectedIndex() == 3 ) {// sistema quinario
             baseNumero=5;
             numConvertir.setText(null);
-
         }
         if(Origen.getSelectedIndex() == 4 ) {// sistema hexal
             baseNumero=6;
@@ -471,12 +460,12 @@ public class Conversor extends javax.swing.JFrame {
     }//GEN-LAST:event_Base_destinoItemStateChanged
 
     private void limpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_limpiarActionPerformed
-        numConvertir.setText(null);
-        numResul.setText(null);
+        numConvertir.setText(null);  //Boton "Limpiar" borra numero ingresado
+        numResul.setText(null);      //Boton "Limpiar" borra resultado de conversion
     }//GEN-LAST:event_limpiarActionPerformed
 
     private void salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirActionPerformed
-        dispose();
+        dispose();  //Boton "Salir" sale del programa
     }//GEN-LAST:event_salirActionPerformed
 
     /**

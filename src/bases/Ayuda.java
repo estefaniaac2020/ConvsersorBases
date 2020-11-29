@@ -7,16 +7,17 @@ package bases;
 
 /**
  *
- * @author ESTEFANIA TAVAED
+ * @author Equipo 4
  */
 public class Ayuda extends javax.swing.JFrame {
 
     /**
      * Creates new form Ayuda
      */
-    public Ayuda() {
-        initComponents();
+    public Ayuda() {                 //constructor
+        initComponents();            // componentes de interfaz
         this.setLocationRelativeTo(null);
+        setTitle("Manual de usuario"); //Titulo de ventana
     }
 
     /**
@@ -32,13 +33,13 @@ public class Ayuda extends javax.swing.JFrame {
         Manual = new javax.swing.JLabel();
         informacion = new javax.swing.JLabel();
         decoracion = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        logoUpiicsa = new javax.swing.JLabel();
         Barra = new javax.swing.JMenuBar();
         Inicio = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem3 = new javax.swing.JMenuItem();
+        regresaInicio = new javax.swing.JMenuItem();
+        salir = new javax.swing.JMenuItem();
         Ayuda1 = new javax.swing.JMenu();
-        jMenuItem2 = new javax.swing.JMenuItem();
+        volver = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -49,12 +50,12 @@ public class Ayuda extends javax.swing.JFrame {
         Manual.setText("Ayuda ");
 
         informacion.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 14)); // NOI18N
-        informacion.setText("<html> BIENVENID@ AL CONVERTIDOR DE BASES NÚMERICAS <p> <p> El convertidor de bases númericas es una aplicación que te ayuda a calcular el valor de un número desde una base origen a una base destino <p> <p> ¿Cómo usar el CONVERTIDOR DE BASES NÚMERICAS?  <p> 1.- Eliga la base origen del número que desea convertir (De base 2 a 16) <p> 2.- Ingresa el numero que deseas convertir (solo admite 10 carácteres) <p> 3.- Eliga la base destino en que se convertira el numero ingresado (De base 2 a 16) <p> 4.- Presione \"Convertir\" <p>  5.- Obten tu resultado <p> 6.- Para hacer una nueva conversión presiona \"Limpiar\" </html>");
+        informacion.setText("<html> BIENVENID@ AL CONVERTIDOR DE BASES NUMÉRICAS <p> <p> El convertidor de bases numéricas es una aplicación que te ayuda a calcular el valor de un número desde una base origen a una base destino <p> <p> ¿Cómo usar el CONVERTIDOR DE BASES NUMÉRICAS?  <p> 1.- Elija la base origen del número que desea convertir (De base 2 a 16) <p> 2.- Ingresa el numero que deseas convertir (solo admite 10 carácteres) <p> 3.- Elija la base destino en que se convertira el número ingresado (De base 2 a 16) <p> 4.- Presione \"Convertir\" <p>  5.- Obten tu resultado <p> 6.- Para hacer una nueva conversión presiona \"Limpiar\" </html>");
 
         decoracion.setBackground(new java.awt.Color(255, 255, 0));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Escudo_UPIICSA (1).png"))); // NOI18N
-        jLabel1.setText("jLabel1");
+        logoUpiicsa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Escudo_UPIICSA (1).png"))); // NOI18N
+        logoUpiicsa.setText("jLabel1");
 
         javax.swing.GroupLayout decoracionLayout = new javax.swing.GroupLayout(decoracion);
         decoracion.setLayout(decoracionLayout);
@@ -62,12 +63,12 @@ public class Ayuda extends javax.swing.JFrame {
             decoracionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, decoracionLayout.createSequentialGroup()
                 .addContainerGap(549, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(logoUpiicsa, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(42, 42, 42))
         );
         decoracionLayout.setVerticalGroup(
             decoracionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 82, Short.MAX_VALUE)
+            .addComponent(logoUpiicsa, javax.swing.GroupLayout.DEFAULT_SIZE, 82, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout AyudaLayout = new javax.swing.GroupLayout(Ayuda);
@@ -97,36 +98,36 @@ public class Ayuda extends javax.swing.JFrame {
 
         Inicio.setText("Inicio");
 
-        jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_R, java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem1.setText("Regresar a Inicio");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+        regresaInicio.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_R, java.awt.event.InputEvent.CTRL_MASK));
+        regresaInicio.setText("Regresar a Inicio");
+        regresaInicio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+                regresaInicioActionPerformed(evt);
             }
         });
-        Inicio.add(jMenuItem1);
+        Inicio.add(regresaInicio);
 
-        jMenuItem3.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem3.setText("Salir");
-        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+        salir.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.CTRL_MASK));
+        salir.setText("Salir");
+        salir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem3ActionPerformed(evt);
+                salirActionPerformed(evt);
             }
         });
-        Inicio.add(jMenuItem3);
+        Inicio.add(salir);
 
         Barra.add(Inicio);
 
         Ayuda1.setText("Conversor");
 
-        jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_W, java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem2.setText("Volver... ");
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+        volver.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_W, java.awt.event.InputEvent.CTRL_MASK));
+        volver.setText("Volver... ");
+        volver.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
+                volverActionPerformed(evt);
             }
         });
-        Ayuda1.add(jMenuItem2);
+        Ayuda1.add(volver);
 
         Barra.add(Ayuda1);
 
@@ -146,21 +147,21 @@ public class Ayuda extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        Inicio a= new Inicio();
+    private void regresaInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regresaInicioActionPerformed
+        Inicio a= new Inicio(); //Boton "regresar" de menuBar manda a ventana "Inicio"
         a.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
+    }//GEN-LAST:event_regresaInicioActionPerformed
 
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        Conversor a= new Conversor();
+    private void volverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volverActionPerformed
+        Conversor a= new Conversor(); //Boton "volver" de menuBar manda a ventana "Conversor"
         a.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
+    }//GEN-LAST:event_volverActionPerformed
 
-    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
-        dispose();
-    }//GEN-LAST:event_jMenuItem3ActionPerformed
+    private void salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirActionPerformed
+        dispose();   //Boton "Salir" de menuBar sale de la aplicacion 
+    }//GEN-LAST:event_salirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -205,9 +206,9 @@ public class Ayuda extends javax.swing.JFrame {
     private javax.swing.JLabel Manual;
     private javax.swing.JPanel decoracion;
     private javax.swing.JLabel informacion;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JLabel logoUpiicsa;
+    private javax.swing.JMenuItem regresaInicio;
+    private javax.swing.JMenuItem salir;
+    private javax.swing.JMenuItem volver;
     // End of variables declaration//GEN-END:variables
 }
