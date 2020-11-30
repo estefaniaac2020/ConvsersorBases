@@ -15,6 +15,7 @@ public class Inicio extends javax.swing.JFrame {
         setTitle("Inicio");         //Título de la ventana 
         initComponents();           //Componentes gráficos
         this.setLocationRelativeTo(null);
+        this.setResizable(false); //Cancela la opcion de cambiar el tamaño de la ventana
     }
     /**
      * This method is called from within the constructor to initialize the form.

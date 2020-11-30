@@ -18,6 +18,7 @@ public class Ayuda extends javax.swing.JFrame {
         initComponents();            // componentes de interfaz
         this.setLocationRelativeTo(null);
         setTitle("Manual de usuario"); //Titulo de ventana
+        this.setResizable(false);
     }
 
     /**
