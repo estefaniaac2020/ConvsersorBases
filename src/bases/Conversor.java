@@ -18,6 +18,7 @@ public class Conversor extends javax.swing.JFrame {
         initComponents();           //Componentes graficos
         this.setLocationRelativeTo(null);
         setTitle("Convsersiones Númericas"); //Titulo de ventana
+        this.setResizable(false);
     }  
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
